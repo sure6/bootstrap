@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+</head>
+<body>
+<select>
+    <option><a href="indexEn.html">English</a></option>
+    <option><a href="indexTW.html">繁体中文</a></option>
+</select>
+<a href="indexEn.html">English</a>
+<a href="indexTW.html">繁体中文</a>
+<button onclick="abc()"> 翻译</button>
+<p>武汉</p>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.translate.js"></script>
+<script>
+    const dict = {
+        "Home": {
+            pt: "Início"
+        },
+        "Download plugin": {
+            pt: "Descarregar plugin",
+            en: "Download plugin"
+        }
+    };
+    const translator = $('body').translate({lang: "en", t: dict}); //use English
+    function abc(){
+        translator.lang("pt"); //change to Portuguese
+    }
+</script>
+</body>
+</html>
